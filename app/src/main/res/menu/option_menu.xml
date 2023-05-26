@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/menu"
+        android:title="Item1"
+        android:icon="@drawable/ic_search"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom|collapseActionView"
+        app:actionViewClass="android.widget.SearchView"
+        />
+    <item android:id="@+id/menu_user"
+        android:title="Đăng nhập / Đăng ký"
+        android:orderInCategory="100"
+        app:showAsAction="withText" />
+    <item android:id="@+id/menu_history"
+        android:title="Lịch sử"
+        android:orderInCategory="100"
+        app:showAsAction="withText" />
+    <item android:id="@+id/menu_profile"
+        android:title="Thông tin cá nhân"
+        android:orderInCategory="100"
+        app:showAsAction="withText" />
+    <group
+        android:id="@+id/menu_group"
+        android:checkableBehavior="none">
+        <item android:id="@+id/menu_type"
+            android:title="Thể loại"
+            android:icon="@drawable/abc_vector_test"
+            android:orderInCategory="100"
+            app:showAsAction="collapseActionView" >
+            <menu>
+                <item android:id="@+id/menu_type_action" android:title="Hành động"/>
+                <item android:id="@+id/menu_type_horror" android:title="Kinh dị"/>
+                <item android:id="@+id/menu_type_comedy" android:title="Tình cảm"/>
+                <item android:id="@+id/menu_type_anime" android:title="Hoạt hình"/>
+            </menu>
+        </item>
+        <item android:id="@+id/menu_year"
+            android:title="Năm ra mắt"
+            android:icon="@drawable/abc_vector_test"
+            android:orderInCategory="100"
+            app:showAsAction="collapseActionView" >
+            <menu>
+                <item android:id="@+id/menu_year_b2000" android:title="Trước năm 2000"/>
+                <item android:id="@+id/menu_year_2000_2010" android:title="từ năm 2000 đến 2010"/>
+                <item android:id="@+id/menu_year_2011_2020" android:title="từ năm 2011 đến 2020"/>
+                <item android:id="@+id/menu_year_a2020" android:title="từ năm 2021 đến nay"/>
+            </menu>
+        </item>
+    </group>
+</menu>

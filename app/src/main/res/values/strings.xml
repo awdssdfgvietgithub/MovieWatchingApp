@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+    <string name="track_selection_titleQuality">Chất lượng</string>
+    <string name="register_button">Chưa có tài khoản? <b>Hãy đăng ký ngay!</b></string>
+    <string name="login_button">Đã có tài khoản? <b>Đăng nhập ngay</b></string>
+</resources>
