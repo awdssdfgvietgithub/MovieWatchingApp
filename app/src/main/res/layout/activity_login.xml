@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    app:layoutDescription="@xml/motion_scene_splash"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
-    android:background="#000000" >
+    android:background="#000000"
+    app:layoutDescription="@xml/motion_scene_splash"
+    tools:context=".ui.activities.LoginActivity">
 
     <ImageView
         android:id="@+id/imgView_logo"
@@ -23,8 +23,8 @@
         android:id="@+id/imgView_logo_rays"
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:rotation="180"
         android:layout_marginTop="80dp"
+        android:rotation="180"
         android:scaleType="centerInside"
         android:src="@drawable/icon2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,16 +56,16 @@
         app:tint="@color/lightGrey" />
 
     <LinearLayout
-        android:alpha="1"
         android:id="@+id/linlay_inputs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
+        android:alpha="1"
         android:gravity="center"
-        android:layout_marginTop="10dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -95,7 +95,7 @@
             android:drawableStart="@drawable/ic_baseline_user_24"
             android:drawableLeft="@drawable/ic_baseline_user_24"
             android:drawablePadding="16dp"
-            android:hint="Tên tài khoản"
+            android:hint="Email"
             android:inputType="textEmailAddress"
             android:padding="16dp"
             android:textSize="14sp" />
@@ -120,8 +120,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:background="@drawable/button_bg"
-            android:text="Đăng nhập"
             android:onClick="login"
+            android:text="Đăng nhập"
             android:textColor="@color/white" />
 
     </LinearLayout>
@@ -132,8 +132,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
-        android:alpha="1"
         android:layout_marginRight="30dp"
+        android:alpha="1"
         android:text="Quên mật khẩu?"
         android:textColor="@color/textDescription"
         android:textSize="13sp"
@@ -144,12 +144,12 @@
         android:id="@+id/tv_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
         android:text="@string/register_button"
         android:textColor="@color/textHeadline"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintStart_toStartOf="parent"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

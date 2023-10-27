@@ -1,41 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_main"
-    tools:context=".WatchActivity">
+    android:orientation="vertical"
+    android:paddingLeft="24dp"
+    android:paddingTop="24dp"
+    android:paddingRight="24dp"
+    tools:context=".ui.activities.WatchActivity">
 
-    <FrameLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imgAnhBia"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imgAnhBia"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher_background" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/tvTenPhim"
-                    android:layout_width="300dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:autoSizeTextType="uniform"
+                    android:layout_marginBottom="6dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:text="Tên phim"
                     android:textColor="@color/white"
-                    android:textSize="25dp" />
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tvSoDiem"
@@ -43,159 +62,187 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:autoSizeTextType="uniform"
-                    android:text="Số điểm: "
+                    android:text="Số điểm"
                     android:textColor="@color/white"
                     android:textSize="18dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvNamRaMat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Năm"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:text="|"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvTuoi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Tuổi"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+                </LinearLayout>
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="26dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tvNamRaMat"
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:text="Năm: "
-                    android:textColor="@color/white"
-                    android:textSize="18dp" />
-
-                <TextView
-                    android:id="@+id/tvTuoi"
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:layout_weight="1"
-                    android:text="Tuổi"
-                    android:textColor="@color/white"
-                    android:textSize="18dp" />
-            </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
                 android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/btnXemPhim"
-                    android:layout_width="120dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary"
                     android:gravity="center"
                     android:text="Xem Phim"
-                    android:backgroundTint="@color/white"
-                    android:textColor="@color/black"
-                    android:layout_margin="5dp"/>
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
 
                 <Button
                     android:id="@+id/btnTrailer"
-                    android:layout_width="120dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary"
                     android:gravity="center"
                     android:text="Trailer"
-                    android:backgroundTint="@color/white"
-                    android:textColor="@color/black"
-                    android:layout_margin="5dp"/>
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
                 <Button
                     android:id="@+id/btnDanhGia"
-                    android:layout_width="120dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary"
                     android:gravity="center"
                     android:text="Đánh giá"
-                    android:backgroundTint="@color/white"
-                    android:textColor="@color/black"
-                    android:layout_margin="5dp"/>
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
-            <TextView
+            <kr.co.prnd.readmore.ReadMoreTextView
                 android:id="@+id/tvNoiDung"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:autoSizeTextType="uniform"
-                android:text="Nội dung:"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Tóm tắt:"
                 android:textColor="@color/white"
-                android:textSize="18dp" />
+                android:textSize="16dp"
+                app:readMoreMaxLine="3"
+                app:readMoreText="...còn tiếp" />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="18dp"
+                android:background="#403838" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:gravity="center"
                 android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0"
-                    android:autoSizeTextType="uniform"
-                    android:text="Bình luận:"
-                    android:textColor="@color/white"
-                    android:textSize="20dp" />
-                <ListView
-                    android:id="@+id/lv"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:scrollbars="vertical"
-                    android:textColor="@color/white" />
-
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/edtnoidungBL"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="8dp"
                         android:layout_weight="1"
-                        android:ems="10"
+                        android:background="@drawable/bg_search_view"
                         android:hint="Nội dung"
                         android:inputType="textPersonName"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="8dp"
+                        android:paddingRight="12dp"
+                        android:paddingBottom="8dp"
                         android:textColor="@color/black"
                         android:textColorHint="@color/black"
-                        android:background="@color/white"
-                        android:layout_gravity="center"/>
+                        android:textSize="16sp" />
 
                     <Button
                         android:id="@+id/btnThemBl"
-                        android:layout_width="10dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Thêm"
-                        android:backgroundTint="@color/white"
-                        android:textColor="@color/black"
-                        android:layout_margin="5dp"/>
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/primary"
+                        android:text="Bình luận"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
                 </LinearLayout>
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="48dp"
+                    tools:listitem="@layout/list_binhluan" />
             </LinearLayout>
         </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
+    <FrameLayout
+        android:id="@+id/fTrailerViewer"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <FrameLayout
-            android:id="@+id/fTrailerViewer"
+        <VideoView
+            android:id="@+id/vdTrailer"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_gravity="center"
-            android:visibility="gone">
+            android:layout_height="match_parent" />
 
-            <VideoView
-                android:id="@+id/vdTrailer"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-            <Button
-                android:id="@+id/btnClose"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="top|right"
-                android:layout_marginRight="20dp"
-                android:text="X" />
-        </FrameLayout>
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="top|right"
+            android:layout_marginRight="20dp"
+            android:text="X" />
     </FrameLayout>
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

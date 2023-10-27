@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="#38613A" /> <!-- Màu nền của shape -->
-    <corners android:radius="20dp" /> <!-- Bán kính cong viền -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/white" /> <!-- Màu nền của shape -->
+    <corners android:radius="30dp" /> <!-- Bán kính cong viền -->
     <stroke
-        android:color="#E33872"
-    android:width="5dp" /> <!-- Độ rộng viền -->
+        android:width="5dp"
+        android:color="@color/primary" /> <!-- Độ rộng viền -->
 </shape>
