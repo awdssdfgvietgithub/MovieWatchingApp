@@ -216,7 +216,8 @@ public class MainActivity extends AppCompatActivity {
                                 object.getString("maPhim"),
                                 object.getString("tenPhim"),
                                 object.getString("soDiemPhim"),
-                                object.getString("anhBia")
+                                object.getString("anhBia"),
+                                object.getString("maTheLoai")
                         ));
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -255,7 +256,8 @@ public class MainActivity extends AppCompatActivity {
                                 object.getString("maPhim"),
                                 object.getString("tenPhim"),
                                 object.getString("soDiemPhim"),
-                                object.getString("anhBia")
+                                object.getString("anhBia"),
+                                object.getString("maTheLoai")
                         ));
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -291,7 +293,8 @@ public class MainActivity extends AppCompatActivity {
                                 object.getString("maPhim"),
                                 object.getString("tenPhim"),
                                 object.getString("soDiemPhim"),
-                                object.getString("anhBia")
+                                object.getString("anhBia"),
+                                object.getString("maTheLoai")
                         ));
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -327,7 +330,8 @@ public class MainActivity extends AppCompatActivity {
                                 object.getString("maPhim"),
                                 object.getString("tenPhim"),
                                 object.getString("soDiemPhim"),
-                                object.getString("anhBia")
+                                object.getString("anhBia"),
+                                object.getString("maTheLoai")
                         ));
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -364,7 +368,8 @@ public class MainActivity extends AppCompatActivity {
                                 object.getString("maPhim"),
                                 object.getString("tenPhim"),
                                 object.getString("soDiemPhim"),
-                                object.getString("anhBia")
+                                object.getString("anhBia"),
+                                object.getString("maTheLoai")
                         ));
                     } catch (JSONException e) {
                         e.printStackTrace();

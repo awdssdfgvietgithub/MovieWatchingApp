@@ -6,17 +6,21 @@ public class MovieItem {
     private String title;
     private String description;
     private String imageUrl;
-    public MovieItem(String maphim, String title, String description, String imageUrl) {
+    private String maTheLoai;
+
+    public MovieItem(String maphim, String title, String description, String imageUrl, String maTheLoai) {
         this.maphim = maphim;
         this.title = title;
         this.description = description;
         this.imageUrl = imageUrl;
+        this.maTheLoai = maTheLoai;
     }
 
 
     public String getMaphim() {
         return maphim;
     }
+
     public String getTitle() {
         return title;
     }
@@ -28,5 +32,10 @@ public class MovieItem {
     public String getImageUrl() {
         return imageUrl;
     }
+
+    public String getMaTheLoai() {
+        return maTheLoai;
+    }
+
 }
 
