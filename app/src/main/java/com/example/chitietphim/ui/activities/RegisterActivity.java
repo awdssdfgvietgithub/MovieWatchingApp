@@ -100,12 +100,7 @@ public class RegisterActivity extends AppCompatActivity {
         id = name = phone = email = password = reenterPassword = "";
 
         Login = (TextView) findViewById(R.id.tv_login);
-        Login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
-            }
-        });
+        Login.setOnClickListener(v -> startActivity(new Intent(RegisterActivity.this, LoginActivity.class)));
     }
 
     public void save(View view) {
@@ -127,7 +122,7 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             }, error -> Toast.makeText(getApplicationContext(), error.toString().trim(), Toast.LENGTH_SHORT).show()) {
                 @Override
-                protected Map<String, String> getParams() throws AuthFailureError {
+                protected Map<String, String> getParams() {
                     Map<String, String> data = new HashMap<>();
                     data.put("id", id);
                     data.put("name", name);
