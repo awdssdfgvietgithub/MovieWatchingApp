@@ -18,20 +18,34 @@
             android:orientation="vertical"
             android:paddingTop="24dp">
 
-            <androidx.appcompat.widget.SearchView
-                android:id="@+id/search_view"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp"
-                android:background="@drawable/bg_search_view"
-                android:textSize="15sp"
-                app:iconifiedByDefault="false"
-                app:layout_constraintTop_toTopOf="parent"
-                app:queryBackground="@null"
-                app:queryHint="Tên phim, diễn viên"
-                app:searchIcon="@drawable/ic_search" />
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
 
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/search_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_search_view"
+                    android:textSize="15sp"
+                    app:iconifiedByDefault="false"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:queryBackground="@null"
+                    app:queryHint="Tên phim, diễn viên"
+                    app:searchIcon="@drawable/ic_search" />
+
+                <Button
+                    android:id="@+id/button_tim_kiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:text="Tìm kiếm" />
+            </LinearLayout>
 
             <HorizontalScrollView
                 android:layout_width="match_parent"

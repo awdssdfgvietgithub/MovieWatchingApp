@@ -2,6 +2,7 @@ package com.example.chitietphim.ui.activities;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -38,6 +39,7 @@ public class SearchActivity extends AppCompatActivity {
     private RadioButton radioTatCa, radioKinhDi, radioHanhDong, radioTinhCam, radioHoatHinh;
     private ArrayList<MovieItem> results;
     private String queryData = "";
+    private Button btnTimKiem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,6 +108,8 @@ public class SearchActivity extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
+                if (!newText.isEmpty())
+                    queryData = newText;
                 return false;
             }
         });
@@ -213,6 +217,10 @@ public class SearchActivity extends AppCompatActivity {
                 }
             }
         });
+
+        btnTimKiem.setOnClickListener(v -> {
+            searchView.setQuery(queryData, true);
+        });
     }
 
     private void addControls() {
@@ -225,6 +233,7 @@ public class SearchActivity extends AppCompatActivity {
         radioHanhDong = findViewById(R.id.radio_hanh_dong);
         radioHoatHinh = findViewById(R.id.radio_hoat_hinh);
         radioTinhCam = findViewById(R.id.radio_tinh_cam);
+        btnTimKiem = findViewById(R.id.button_tim_kiem);
         results = new ArrayList();
     }
 
